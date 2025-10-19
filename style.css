@@ -1,0 +1,204 @@
+/* GLOBAL USLUBLAR */
+:root {
+    --primary-color: #ff4b4b; /* Yorqin Qizil/Korall rang */
+    --secondary-color: #333333; /* To'q kulrang */
+    --background-color: #f8f8f8;
+    --card-background: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* HEADER USLUBLAR */
+header {
+    background-color: var(--card-background);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5em;
+    color: var(--secondary-color);
+    font-weight: 800;
+}
+
+.subtitle {
+    color: #666;
+    font-weight: 400;
+    font-size: 1.1em;
+}
+
+/* ASOSIY QISM VA KARTA USLUBLARI */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: var(--card-background);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.7em;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 10px;
+}
+
+/* CHAT MOKAP USLUBLARI */
+.chat-mockup {
+    background-color: #e8e8e8; /* Mockup fon rangi */
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-message {
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 18px;
+    max-width: 75%;
+    word-wrap: break-word;
+    font-size: 0.95em;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.chat-name {
+    font-weight: 700;
+    color: #0088cc; /* Telegram aksent */
+    margin-right: 5px;
+}
+
+.user-right {
+    background-color: #cfd8dc; /* Yashil (boshqa user) o'rniga neytral rang */
+    align-self: flex-end;
+}
+
+.user-left {
+    background-color: #ffffff; /* Oq (asosiy user) */
+    align-self: flex-start;
+}
+
+/* JADVAL USLUBLARI */
+table {
+    width: 100%;
+    border-collapse: separate; /* Border radius uchun */
+    border-spacing: 0;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+th, td {
+    padding: 14px 18px;
+    text-align: left;
+    border-right: 1px solid #eee;
+}
+
+th {
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-right: 1px solid #444;
+}
+
+td:last-child, th:last-child {
+    border-right: none;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+/* IJTIMOIY TARMOQLAR USLUBLARI */
+.social-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.social-list li {
+    padding: 10px 15px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.social-list li:hover {
+    transform: translateY(-3px);
+}
+
+/* Har bir tarmoq uchun maxsus rang */
+.telegram { background-color: #0088cc; }
+.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.facebook { background-color: #4267B2; }
+.tiktok { background-color: #000000; }
+.youtube { background-color: #FF0000; }
+
+/* XULOSA USLUBLARI */
+.conclusion-section {
+    border-left: 5px solid var(--primary-color);
+    background-color: #fff9f9;
+}
+
+.conclusion-text {
+    font-style: normal;
+    font-size: 1.15em;
+    color: var(--secondary-color);
+    border: 1px dashed var(--primary-color);
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+/* FOOTER USLUBLARI */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--secondary-color);
+    color: #fff;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Responsive (Mobil moslashuv) */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .card {
+        padding: 15px;
+    }
+    .user-left, .user-right {
+        max-width: 95%;
+    }
+    .social-list {
+        flex-direction: column;
+    }
+}
