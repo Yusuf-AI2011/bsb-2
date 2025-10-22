@@ -1,4 +1,9 @@
 /* GLOBAL USLUBLAR */
+/* ✨ YANGLANGAN QISM: Skrollni bartaraf etish uchun BOX-SIZING qo'shildi ✨ */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 :root {
     --primary-color: #ff4b4b; /* Yorqin Qizil/Korall rang */
     --secondary-color: #333333; /* To'q kulrang */
@@ -14,7 +19,48 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    
+    /* ✨ YANGLANGAN QISM: Gorizontal skrollni yashirish ✨ */
+    overflow-x: hidden; 
 }
+
+/* YANGLANGAN QISM: INFO BAR USLUBLARI (Minimalistikga moslangan) */
+#info-bar {
+    width: 100%;
+    /* Oq fon, yupqa qizil pastki chegara */
+    background-color: var(--card-background); 
+    color: var(--secondary-color); 
+    padding: 8px 15px;
+    font-size: 0.95em;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd; /* Juda yengil chegara */
+    
+    display: flex;
+    justify-content: center; /* Elementlarni markazga yaqinroq joylash */
+    gap: 20px; /* Elementlar orasidagi bo'shliq */
+    align-items: center;
+}
+
+#info-bar p {
+    margin: 0; 
+    padding: 0;
+    /* Elementlarni vertikal chiziq bilan ajratish */
+    border-right: 1px solid #ccc; 
+    padding-right: 20px; 
+}
+
+/* Eng oxirgi elementdan chiziqni olib tashlash */
+#info-bar p:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+/* Ism uchun maxsus stil - asosiy rangda va qalinroq */
+#info-bar p:first-child {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+/* YANGLANGAN QISM TUGADI */
 
 /* HEADER USLUBLAR */
 header {
@@ -87,7 +133,7 @@ main {
 }
 
 .user-right {
-    background-color: #cfd8dc; /* Yashil (boshqa user) o'rniga neytral rang */
+    background-color: #cfd8dc; /* Neytral rang */
     align-self: flex-end;
 }
 
@@ -99,7 +145,7 @@ main {
 /* JADVAL USLUBLARI */
 table {
     width: 100%;
-    border-collapse: separate; /* Border radius uchun */
+    border-collapse: separate; 
     border-spacing: 0;
 }
 
@@ -189,6 +235,15 @@ footer {
 
 /* Responsive (Mobil moslashuv) */
 @media (max-width: 600px) {
+    #info-bar {
+        flex-direction: column;
+        gap: 5px;
+    }
+    #info-bar p {
+        border-right: none;
+        padding-right: 0;
+    }
+    
     header h1 {
         font-size: 2em;
     }
